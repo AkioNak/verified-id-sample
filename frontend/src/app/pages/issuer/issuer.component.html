@@ -1,0 +1,71 @@
+<div class="mb-10">
+  <!-- 氏名を入力 -->
+  <div *ngIf="state === 0">
+    <form #issuanceForm="ngForm">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>姓</mat-label>
+          <input
+            matInput
+            name="lastName"
+            [(ngModel)]="request.lastName"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>名</mat-label>
+          <input
+            matInput
+            name="firstName"
+            [(ngModel)]="request.firstName"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="issuanceForm.form.invalid"
+          class="btn btn-primary"
+          (click)="issueCredential()"
+        >
+          証明書を発行する
+        </button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="state === 1">
+    <span>証明書の発行をリクエストしています。しばらくお待ちください。</span>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+
+  <!-- QRコード表示 -->
+  <div *ngIf="state === 2">
+    <div>
+      Microsoft
+      AuthenticatorまたはカメラアプリでQRコードを読み取り、証明書を許可してください。
+    </div>
+    <qrcode [qrdata]="url" [width]="300"></qrcode>
+  </div>
+
+  <!-- PIN表示 -->
+  <div *ngIf="state === 3">
+    <div>
+      QRコードが読み取られました。以下の確認コードをAuthenticatorで入力し、証明書を追加してください。
+    </div>
+    <h3>{{ pin }}</h3>
+  </div>
+
+  <!-- 発行完了 -->
+  <div *ngIf="state === 4">
+    <div>証明書の発行が完了しました。</div>
+    <div>
+      {{ result }}
+    </div>
+  </div>
+</div>
+
+<button mat-raised-button [routerLink]="'/main'">Back</button>
