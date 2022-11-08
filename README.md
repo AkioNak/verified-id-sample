@@ -18,6 +18,7 @@
 
 - お手持ちのモバイル端末に Microsoft Authenticator がない場合は下記の URL からインストールします。
    - https://www.microsoft.com/ja-jp/security/mobile-authenticator-app
+   - 発行した証明書の管理や確認はMicrosoft Authenticatorで行います。
    - Microsoft Authenticator を初回起動した際に Microsoft アカウントへのサインインが聞かれますが、Verified ID では不要ですのでスキップして構いません。
 
 ### 起動手順
