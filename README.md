@@ -2,7 +2,7 @@
 [Microsoft Entra Verified ID](https://learn.microsoft.com/ja-jp/azure/active-directory/verifiable-credentials/decentralized-identifier-overview)を利用したデジタル証明書の発行および検証を行うアプリケーションです。
 
 ### 前提
-- Microsoft Entra Verified IDの実行環境構築は既に行われているものとします。
+- Microsoft Entra Verified IDの環境構築は既に行われているものとします。
   - 環境構築手順については下記のURLをご参照ください。
     - https://learn.microsoft.com/ja-jp/azure/active-directory/verifiable-credentials/verifiable-credentials-configure-tenant
     - https://learn.microsoft.com/ja-jp/azure/active-directory/verifiable-credentials/verifiable-credentials-configure-issuer
