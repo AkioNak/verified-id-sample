@@ -16,9 +16,9 @@
     - フレームワーク：Angular v14
     - Node バージョン： Node v16.18.0
 
-また、お手持ちのモバイル端末に Microsoft Authenticator がない場合は下記の URL からインストールします。
-- https://www.microsoft.com/ja-jp/security/mobile-authenticator-app
-- Microsoft Authenticator を初回起動した際に Microsoft アカウントへのサインインが聞かれますが、Verified ID では不要ですのでスキップして構いません。
+- また、お手持ちのモバイル端末に Microsoft Authenticator がない場合は下記の URL からインストールします。
+   - https://www.microsoft.com/ja-jp/security/mobile-authenticator-app
+   - Microsoft Authenticator を初回起動した際に Microsoft アカウントへのサインインが聞かれますが、Verified ID では不要ですのでスキップして構いません。
 
 ### 起動手順
 #### Backend
